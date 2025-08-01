@@ -19,7 +19,7 @@ profileRoute.get("/view", userAuth, async(req, res) => {
 
 profileRoute.patch("/edit" , userAuth , async (req,res) => {
     try {
-        if(!validateEditFields){
+        if(!validateEditFields(req)){
             throw new Error("Invalid Edit request");
             
         }

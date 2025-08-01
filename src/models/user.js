@@ -55,6 +55,7 @@ const userSchema = new mongoose.Schema({
     },
     photoUrl: {
         type : String,
+        default : "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww",
         validate(value){
             if(!validator.isURL(value)){
                 throw new Error("Invalid photourl:" + value );
